@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Medical Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+            max-width: 800px;
+            margin-left: auto;  /* Center horizontally */
+            margin-right: auto; /* Center horizontally */
+        }
+
+        h1 {
+            color: #333;
+            text-align: center; /* Center the heading */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 56px; /* height of navbar */
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            height: calc(100vh - 56px);
+            padding: 48px 0 0;
+            background-color: #343a40;
+            overflow-x: hidden;
+        }
+
+        .sidebar a {
+            color: white;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .navbar-toggler {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <h4 class="text-white text-center">Menu</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/input">Input Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="/">
+                        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="height: 40px;">
+                        Medical Website
+                    </a>
+                </nav>
+
+                <div class="container mt-5">
+                    <h1>Login</h1>
+                    <form method="POST" action="/login">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
