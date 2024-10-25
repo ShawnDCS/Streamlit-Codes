@@ -91,11 +91,11 @@
             </div>
             <div class="result-box">
                 <strong>Hypertension</strong>
-                {{ hypertension }}
+                {{ 'Yes' if hypertension else 'No' }}
             </div>
             <div class="result-box">
                 <strong>Heart Disease</strong>
-                {{ heart_disease }}
+                {{ 'Yes' if heart_disease else 'No' }}
             </div>
             <div class="result-box">
                 <strong>Average Glucose Level</strong>
@@ -120,6 +120,10 @@
             <div class="result-box">
                 <strong>Work Type</strong>
                 {{ work_type }}
+            </div>
+            <div class="result-box">
+                <strong>Stroke Prediction</strong>
+                {{ stroke_prediction }}
             </div>
         </div>
         <div class="text-center mt-4">

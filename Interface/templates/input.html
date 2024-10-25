@@ -73,7 +73,7 @@
             </div>
 
             <div class="form-group">
-                <label>Gender</label>
+                <label>Gender:</label><br>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" id="gender_male" name="gender" value="male" required>
                     <label class="form-check-label" for="gender_male">Male</label>
@@ -91,7 +91,7 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Hypertension</label>
+                        <label>Hypertension</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="hypertension_yes" name="hypertension" value="yes" required>
                             <label class="form-check-label" for="hypertension_yes">Yes</label>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Heart Disease</label>
+                        <label>Heart Disease</label><br>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="heart_disease_yes" name="heart_disease" value="yes" required>
                             <label class="form-check-label" for="heart_disease_yes">Yes</label>
@@ -119,32 +119,28 @@
 
             <div class="form-group">
                 <label for="avg_glucose">Average Glucose Level</label>
-                <input type="number" class="form-control" id="avg_glucose" name="avg_glucose" required>
+                <input type="number" step=".01" class="form-control" id="avg_glucose" name="avg_glucose" required>
             </div>
 
             <div class="form-group">
                 <label for="bmi">BMI</label>
-                <input type="number" class="form-control" id="bmi" name="bmi" required>
+                <input type="number" step=".01" class="form-control" id="bmi" name="bmi" required>
             </div>
 
             <div class="form-group">
-                <label>Marital Status</label>
+                <label>Is Married?</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="marital_status_married" name="marital_status" value="married" required>
-                    <label class="form-check-label" for="marital_status_married">Married</label>
+                    <input class="form-check-input" type="radio" id="marital_status_Yes" name="marital_status" value="Yes" required>
+                    <label class="form-check-label" for="marital_status_married">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="marital_status_single" name="marital_status" value="single" required>
-                    <label class="form-check-label" for="marital_status_single">Single</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="marital_status_divorced" name="marital_status" value="divorced" required>
-                    <label class="form-check-label" for="marital_status_divorced">Divorced</label>
+                    <input class="form-check-input" type="radio" id="marital_status_No" name="marital_status" value="No" required>
+                    <label class="form-check-label" for="marital_status_single">No</label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Residence Type</label>
+                <label>Residence Type</label><br>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" id="residence_type_urban" name="residence_type" value="urban" required>
                     <label class="form-check-label" for="residence_type_urban">Urban</label>
@@ -156,41 +152,41 @@
             </div>
 
             <div class="form-group">
-                <label>Smoking Status</label>
+                <label>Smoking Status</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="smoking_status_current" name="smoking_status" value="currently_smoking" required>
-                    <label class="form-check-label" for="smoking_status_current">Currently Smoking</label>
+                    <input class="form-check-input" type="radio" id="smoking_status_no" name="smoking_status" value="never smoked" required>
+                    <label class="form-check-label" for="smoking_status_current">Never Smoked</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="smoking_status_former" name="smoking_status" value="formerly_smoked" required>
-                    <label class="form-check-label" for="smoking_status_former">Formerly Smoked</label>
+                    <input class="form-check-input" type="radio" id="smoking_status_unknown" name="smoking_status" value="Unknown" required>
+                    <label class="form-check-label" for="smoking_status_former">I'd rather not tell</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="smoking_status_no" name="smoking_status" value="no_smoke" required>
-                    <label class="form-check-label" for="smoking_status_no">No Smoke</label>
+                    <input class="form-check-input" type="radio" id="smoking_status_formerly" name="smoking_status" value="formerly smoked" required>
+                    <label class="form-check-label" for="smoking_status_no">Formerly Smoked</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="smoking_status_smokes" name="smoking_status" value="smokes" required>
+                    <label class="form-check-label" for="smoking_status_no">Currently Smoking</label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Work Type</label>
+                <label>Work Type</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="work_type_private" name="work_type" value="private" required>
+                    <input class="form-check-input" type="radio" id="work_type_private" name="work_type" value="Private" required>
                     <label class="form-check-label" for="work_type_private">Private</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="work_type_government" name="work_type" value="government" required>
+                    <input class="form-check-input" type="radio" id="work_type_government" name="work_type" value="Govt_job" required>
                     <label class="form-check-label" for="work_type_government">Government</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="work_type_unemployed" name="work_type" value="unemployed" required>
-                    <label class="form-check-label" for="work_type_unemployed">Unemployed</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" id="work_type_children" name="work_type" value="children" required>
                     <label class="form-check-label" for="work_type_children">Children</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="work_type_self_employed" name="work_type" value="self_employed" required>
+                    <input class="form-check-input" type="radio" id="work_type_self_employed" name="work_type" value="Self-employed" required>
                     <label class="form-check-label" for="work_type_self_employed">Self-Employed</label>
                 </div>
             </div>
